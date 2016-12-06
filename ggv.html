@@ -7,6 +7,18 @@
   <link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <script src="../../ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="../../maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script>
+            function setup() {
+                document.getElementById('buttonid').addEventListener('click', openDialog);
+                function openDialog() {
+                    document.getElementById('fileid').click();
+                }
+                document.getElementById('fileid').addEventListener('change', submitForm);
+                function submitForm() {
+                    document.getElementById('formid').submit();
+                }
+            }
+        </script> 
 <title>CheetahMovies.org</title>
 <style>
 
@@ -127,7 +139,7 @@ a:hover{
   html { background: src="file:///C:/Users/zs/Desktop/jjj/bvb.jpg" #000 no-repeat center center fixed; }
 </style>
 </head>
-<body>
+<body onload="setup()">
 <video id="bg" src="polina.webm" autoplay="true" width="100%"
 
 loop="true" muted="true">
@@ -137,8 +149,8 @@ loop="true" muted="true">
 <h1>CheetahMovies.org</h1>
 </header>
 <ul>
- <li><a href="file:///C:/Users/Mragank/Desktop/bvb.jpg">HOME    </a></li>
-  <li><a href=html_images.html">HTML Images</a></a></li>
+ <li><a href="Mragank.jpg">MEET THE DEVELOPER</a></li>
+  <li><a href="https://www.google.co.in/search?q=MRAGANK+JAIN+JECRC&ie=utf-8&oe=utf-8&client=firefox-b-ab&gfe_rd=cr&ei=9BxHWJfZKsOBogOAgYEo">ABOUT</a></a></li>
   <li><a href="r2.html">ROMANCE</a></li>
   <li><a href="#about">ANIME</a></li>
 <li><a href="#about">COMEDY</a></li>
@@ -162,18 +174,22 @@ loop="true" muted="true">
 <h1>CheetahMovies.org</h1>
 <h2>New Movie trailer</h2>
 <p>
-Permanent Roomates is upcoming Season directed by Sandeep Singh.<br>
+KAHANI 2 is upcoming MOVIE directed by SUJOY GHOSH.<br>
 Expections:High
 </p>
 <hr>
 <pre>
 CAST:
-Sumit Vyas
-Nidhi Singh
-Niti Bisht
+VIDYA BALAN
+
 </pre>
+	<form id='formid' action="form.php" method="POST" enctype="multipart/form-data"> 
+            <input id='fileid' type='file' name='filename' hidden/>
+            <input id='buttonid' type='button' value='Upload YOUR VIDEO' /> 
+            <input type='submit' value='Submit Now!' /> 
+        </form> 
 <hr>
-<video src="polina.webm" autoplay="true" controls="" loop="true" width="130%" height="230%">
+<video src="kahani.webm" autoplay="true" controls="" loop="true" width="130%" height="230%">
 </video>
 </section>
 <div id="polina">
